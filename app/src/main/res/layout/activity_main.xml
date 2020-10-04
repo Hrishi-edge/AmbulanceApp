@@ -1,33 +1,247 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/Black"
     tools:context=".MainActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  Dashboard"
+            android:textSize="26sp"
+            android:textColor="@color/white"
+            android:layout_margin="20dp"/>
+
+        <GridLayout
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+            android:layout_height="match_parent"
+            android:rowCount="3"
+            android:columnCount="2"
+            android:layout_margin="5dp"
+            android:alignmentMode="alignMargins"
+            android:layout_gravity="center_horizontal"
+            android:columnOrderPreserved="false">
 
-    </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_main" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp"
+                app:cardBackgroundColor="@color/gray"
+                android:layout_margin="10dp">
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+
+                    <ImageView
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:src="@drawable/ambi"
+                        android:layout_marginTop="18dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Avail Ambulance"
+                    android:textSize="20sp"
+                    android:textColor="@color/Black"
+                    android:layout_marginTop="20dp"
+                    />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp"
+                app:cardBackgroundColor="@color/gray"
+                android:layout_margin="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:src="@drawable/hosi"
+                    android:layout_marginTop="18dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Hospital List"
+                    android:textSize="20sp"
+                    android:textColor="@color/Black"
+                    android:layout_marginTop="20dp"
+                    />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp"
+                app:cardBackgroundColor="@color/gray"
+                android:layout_margin="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:src="@drawable/bloi"
+                    android:layout_marginTop="18dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="   Blood Bank"
+                    android:textSize="20sp"
+                    android:textColor="@color/Black"
+                    android:layout_marginTop="20dp"
+                    />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp"
+                app:cardBackgroundColor="@color/gray"
+                android:layout_margin="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:src="@drawable/vent"
+                    android:layout_marginTop="18dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ventilation"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="20dp"
+                    />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp"
+                app:cardBackgroundColor="@color/gray"
+                android:layout_margin="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:src="@drawable/payi"
+                    android:layout_marginTop="18dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Payments"
+                    android:textSize="20sp"
+                    android:textColor="@color/Black"
+                    android:layout_marginTop="20dp"
+                    />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp"
+                app:cardBackgroundColor="@color/gray"
+                android:layout_margin="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:src="@drawable/ambi"
+                    android:layout_marginTop="18dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Log out"
+                    android:textSize="20sp"
+                    android:textColor="@color/Black"
+                    android:layout_marginTop="20dp"
+                    />
+
+
+            </androidx.cardview.widget.CardView>
+
+
+        </GridLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+
+</ScrollView>
+
+
+
